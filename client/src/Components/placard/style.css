@@ -1,0 +1,47 @@
+.placard-container{
+    height: 100%;
+    min-width: 30em;
+    width: fit-content;
+    background-color: white;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    box-sizing: border-box; /* include padding into width */
+    overflow-y: hidden;
+}
+
+
+.placard-grid{
+    display: grid;
+    grid-template-rows: 10% 65%;
+}
+.placard-header{
+    display: grid;
+
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+}
+
+.placard-header-active{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(140, 255, 140);
+    border-radius: 50%;
+    display: inline-block;
+    justify-self: end;
+}
+
+.placard-body{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+}
+.placard-body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.placard-body div{
+    border: 1px solid black;
+    min-height: 100px;
+}

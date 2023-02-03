@@ -1,0 +1,13 @@
+.homepage-container{
+    display: grid;
+    min-height: 100vh;
+    padding: 0 5%;
+    align-items: center;
+}
+
+.homepage-flexbox{
+    height: 80%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
