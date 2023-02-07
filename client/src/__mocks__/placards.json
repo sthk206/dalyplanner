@@ -1,0 +1,38 @@
+{
+    "placards": [
+      {
+        "title": "Shopping List",
+        "items": [
+          {
+            "task": "Milk",
+            "completed": false
+          },
+          {
+            "task": "Bread",
+            "completed": false
+          },
+          {
+            "task": "Eggs",
+            "completed": true
+          }
+        ]
+      },
+      {
+        "title": "Work Tasks",
+        "items": [
+          {
+            "task": "Write report",
+            "completed": false
+          },
+          {
+            "task": "Prepare presentation",
+            "completed": true
+          },
+          {
+            "task": "Attend meeting",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  }

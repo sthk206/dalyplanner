@@ -1,12 +1,23 @@
 import "./style.css";
 import Placard from "../../Components/placard"
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Homepage = () => {
     const flexboxRef = useRef(null);
     const containerRef = useRef(null)
+    const [placards, setPlacards] = useState([]);
     useEffect(()=>{
-
+        fetch("/members")
+            .then(
+                res=>res.json()
+            )
+            .then(
+                data => {
+                setPlacards(data.placards)
+                console.log('blablabla')
+                }
+            )
+        // setPlacards(placardMock.placards)
         // const target = document.querySelector('.homepage-flexbox')
 
         // function handleWheel(event) {
@@ -45,14 +56,9 @@ const Homepage = () => {
     return(
         <div ref={containerRef} className="homepage-container">
             <div ref={flexboxRef} className="homepage-flexbox">
-                <Placard/>
-                <Placard/>
-                <Placard/>
-                <Placard/>
-                <Placard/>
-                <Placard/>
-                <Placard/>
-                <Placard/>
+                {placards.map((placard, index)=>{
+                    return(<Placard key={placard.id || index} title={placard.title} items={placard.items}/>)
+                })}
             </div>
 
         </div>
